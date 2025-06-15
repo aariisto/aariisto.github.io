@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Yannel Aissani</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">Yannel Aissani</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="competences.html" class="nav-link">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a href="projets.html" class="nav-link">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a href="a-propos.html" class="nav-link">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">Contactez-moi</h1>
+          <p class="page-description">
+            Intéressé par mon profil ? N'hésitez pas à me contacter pour
+            discuter d'opportunités de stage, d'alternance ou de collaboration.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-content">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2>Restons en contact</h2>
+              <p>
+                Je suis toujours ouvert aux nouvelles opportunités et aux
+                discussions enrichissantes dans le domaine du développement et
+                de la data science.
+              </p>
+
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Email</h4>
+                    <a href="mailto:yanne.aissani@gmail.com"
+                      >yanne.aissani@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>LinkedIn</h4>
+                    <a
+                      href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
+                      target="_blank"
+                      >linkedin.com/in/yannel-aissani-2b7509304/</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/aariisto" target="_blank"
+                      >github.com/aariisto</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Localisation</h4>
+                    <span>France, Île-de-France</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="availability">
+                <h3>Disponibilité</h3>
+                <div class="availability-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span
+                    >Recherche de Master en Développement Web ou Data
+                    Science</span
+                  >
+                </div>
+                <div class="availability-item">
+                  <i class="fas fa-briefcase"></i>
+                  <span>Ouvert aux opportunités de stage et d'alternance</span>
+                </div>
+                <div class="availability-item">
+                  <i class="fas fa-handshake"></i>
+                  <span>Disponible pour des projets collaboratifs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-container">
+              <form class="contact-form" id="contactForm">
+                <h3>Envoyez-moi un message</h3>
+
+                <div class="form-group">
+                  <label for="name">Nom complet *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Adresse email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Sujet</label>
+                  <select id="subject" name="subject">
+                    <option value="">Sélectionnez un sujet</option>
+                    <option value="opportunity">
+                      Opportunité professionnelle
+                    </option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="internship">Stage/Alternance</option>
+                    <option value="project">Projet</option>
+                    <option value="other">Autre</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                    placeholder="Décrivez votre demande, vos besoins ou simplement dites bonjour !"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i>
+                  Envoyer le message
+                </button>
+              </form>
+
+              <div class="form-success" id="formSuccess" style="display: none">
+                <div class="success-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <h4>Message envoyé avec succès !</h4>
+                <p>
+                  Merci pour votre message. Je vous répondrai dans les plus
+                  brefs délais.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Collaborons ensemble</h2>
+            <p>
+              Que ce soit pour un stage, une alternance, un projet ou simplement
+              pour échanger sur nos expériences dans le développement, je serais
+              ravi d'avoir de vos nouvelles.
+            </p>
+            <div class="cta-buttons">
+              <a href="mailto:yanne.aissani@gmail.com" class="btn btn-primary">
+                <i class="fas fa-envelope"></i>
+                Envoyer un email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
+                class="btn btn-secondary"
+              >
+                <i class="fab fa-linkedin"></i>
+                Connecter sur LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2025 Yannel Aissani. Tous droits réservés.</p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
+              class="social-link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/aariisto" class="social-link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:yanne.aissani@gmail.com" class="social-link"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
