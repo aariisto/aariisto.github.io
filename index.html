@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yannel Aissani - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,10 +20,10 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="brand-container">
-          <a href="#" class="nav-logo"><i class="fas fa-home"></i></a>
+          <a href="#" class="nav-logo" aria-label="Accueil"><i class="fas fa-home" aria-hidden="true"></i></a>
           <span class="portfolio-tag">#MonPortFolio</span>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="navMenu">
           <li class="nav-item">
             <a href="index.html" class="nav-link active">Accueil</a>
           </li>
@@ -38,10 +40,17 @@
             <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div
+          class="hamburger"
+          role="button"
+          tabindex="0"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
         </div>
       </div>
     </nav>
@@ -55,15 +64,14 @@
                 Bonjour, je suis <span class="highlight">Yannel Aissani</span>
               </h1>
               <h2 class="hero-subtitle">
-                Futur Développeur Web & Data | Motivé, Professionnel et
-                Résilient
+                Développeur Full-Stack & Data | Candidat au cycle Ingénieur
               </h2>
               <p class="hero-description">
-                Étudiant en BUT2 Informatique, je combine passion pour le
-                développement et détermination. Mon parcours d'étudiant
-                international m'a appris l'adaptabilité et la persévérance, des
-                qualités qui me permettent aujourd'hui d'exceller dans mes
-                études et projets.
+                Je viens de terminer mon BUT Informatique (parcours Réalisation
+                d'applications) à l'IUT de Villetaneuse. J'aime construire des
+                applications web et mobiles, et travailler la donnée, du backend
+                jusqu'à l'IA. Mon parcours, d'Alger à Paris, m'a appris à
+                m'adapter vite et à tenir dans la durée.
               </p>
               <div class="hero-buttons">
                 <a href="projets.html" class="btn btn-primary">
@@ -115,7 +123,7 @@
           <div class="section-header">
             <h3 class="section-title">Mon Parcours</h3>
             <p class="section-subtitle">
-              D'Alger à la France : une progression constante vers l'excellence
+              D'Alger à Paris, étape par étape
             </p>
           </div>
           <div class="timeline">
@@ -142,39 +150,50 @@
             <div class="timeline-item">
               <div class="timeline-marker"></div>
               <div class="timeline-content">
-                <h4>BUT2 - Excellence</h4>
+                <h4>BUT2 - Le travail qui paie</h4>
                 <p>
-                  Classement parmi les meilleurs de ma promotion, récompensant
-                  mes efforts et ma persévérance (2024-2025, en cours).
+                  Classé parmi les meilleurs de ma promotion. Une bonne surprise
+                  après les difficultés de la première année (2024-2025).
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>BUT3 - Réalisation d'applications</h4>
+                <p>
+                  Troisième année autour du développement full-stack, de
+                  l'architecture logicielle et des bases de données avancées,
+                  avec un stage en entreprise (2025-2026).
                 </p>
               </div>
             </div>
             <div class="timeline-item future">
               <div class="timeline-marker"></div>
               <div class="timeline-content">
-                <h4>Mon But - Master 1 et 2</h4>
+                <h4>La suite - Cycle Ingénieur ou Master</h4>
                 <p class="future-goal-intro">
-                  <strong>Objectif 2026-2028 :</strong> Je vise à poursuivre mon
-                  parcours académique avec un Master spécialisé dans l'un de ces
-                  domaines :
+                  <strong>À partir de 2026 :</strong> je veux poursuivre vers un
+                  cycle ingénieur en informatique ou un master spécialisé, dans
+                  l'un de ces domaines :
                 </p>
                 <ul class="future-goals-list">
                   <li>
                     <i class="fas fa-globe"></i>
-                    <strong>Développement Web et Applications</strong>
+                    <strong>Développement web et applications</strong>
                   </li>
                   <li>
                     <i class="fas fa-database"></i>
-                    <strong>Data Science</strong>
+                    <strong>Data science</strong>
                   </li>
                   <li>
                     <i class="fas fa-cogs"></i>
-                    <strong>Data Engineering</strong>
+                    <strong>Data engineering</strong>
                   </li>
                 </ul>
                 <p class="future-goal-conclusion">
-                  Mon ambition est de consolider mon expertise technique et
-                  d'atteindre l'excellence dans ces domaines porteurs d'avenir.
+                  L'idée est simple : approfondir la technique et continuer à
+                  construire des projets concrets.
                 </p>
               </div>
             </div>
@@ -187,39 +206,69 @@
           <div class="section-header">
             <h3 class="section-title">Compétences Clés</h3>
             <p class="section-subtitle">
-              Mes points forts développés au fil de mon parcours
+              Ce que je sais faire et avec quels outils
             </p>
           </div>
           <div class="skills-grid">
             <div class="skill-card">
               <div class="skill-icon">
-                <i class="fas fa-puzzle-piece"></i>
+                <i class="fas fa-laptop-code"></i>
               </div>
-              <h4>Résolution de problèmes</h4>
+              <h4>Développement full-stack</h4>
               <p>
-                Capacité à analyser et résoudre des problèmes complexes de
-                manière méthodique.
+                Java, Python, PHP, JavaScript, React et Next.js. Conception
+                d'API REST et architecture MVC, du frontend à la base de
+                données.
               </p>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <i class="fas fa-sync-alt"></i>
+                <i class="fas fa-database"></i>
               </div>
-              <h4>Adaptabilité</h4>
+              <h4>Données & IA</h4>
               <p>
-                Faculté d'adaptation dans de nouveaux environnements et face aux
-                défis.
+                PostgreSQL, MySQL, MongoDB et Redis. Traitement de données et
+                similarité vectorielle (embeddings) pour des moteurs de
+                recommandation.
               </p>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-server"></i>
               </div>
-              <h4>Travail d'équipe</h4>
+              <h4>DevOps & systèmes</h4>
               <p>
-                Expérience en travail collaboratif et capacité à travailler en
-                autonomie.
+                Docker et Docker Compose, Linux (WSL, Bash), administration de
+                serveurs et déploiement sur VPS. Git et GitHub au quotidien.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills-preview">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="section-title">Langues</h3>
+            <p class="section-subtitle">
+              Un profil multilingue, utile en équipe comme avec les clients
+            </p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-language"></i></div>
+              <h4>Français · Arabe</h4>
+              <p>Bilingue (C2). Langues de travail et du quotidien.</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-language"></i></div>
+              <h4>Anglais</h4>
+              <p>Niveau B2. À l'aise pour lire la doc technique et échanger.</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-language"></i></div>
+              <h4>Kabyle</h4>
+              <p>Langue maternelle.</p>
             </div>
           </div>
         </div>
@@ -229,18 +278,25 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p>&copy; 2025 Yannel Aissani. Tous droits réservés.</p>
+          <p>&copy; 2026 Yannel Aissani. Tous droits réservés.</p>
           <div class="social-links">
             <a
               href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
               class="social-link"
-              ><i class="fab fa-linkedin"></i
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
             ></a>
-            <a href="https://github.com/aariisto" class="social-link"
-              ><i class="fab fa-github"></i
+            <a
+              href="https://github.com/aariisto"
+              class="social-link"
+              aria-label="GitHub"
+              ><i class="fab fa-github" aria-hidden="true"></i
             ></a>
-            <a href="mailto:yanne.aissani@gmail.com" class="social-link"
-              ><i class="fas fa-envelope"></i
+            <a
+              href="mailto:yanne.aissani@gmail.com"
+              class="social-link"
+              aria-label="Email"
+              ><i class="fas fa-envelope" aria-hidden="true"></i
             ></a>
           </div>
         </div>

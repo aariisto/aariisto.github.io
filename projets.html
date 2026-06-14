@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projets - Yannel Aissani</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,10 +20,10 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="brand-container">
-          <a href="index.html" class="nav-logo"><i class="fas fa-home"></i></a>
+          <a href="index.html" class="nav-logo" aria-label="Accueil"><i class="fas fa-home" aria-hidden="true"></i></a>
           <span class="portfolio-tag">#MonPortFolio</span>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="navMenu">
           <li class="nav-item">
             <a href="index.html" class="nav-link">Accueil</a>
           </li>
@@ -38,10 +40,17 @@
             <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div
+          class="hamburger"
+          role="button"
+          tabindex="0"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
         </div>
       </div>
     </nav>
@@ -49,28 +58,25 @@
     <main class="main-content">
       <section class="page-header">
         <div class="code-elements">
-          <span class="code-element" data-language="Salesforce"
-            >Salesforce</span
-          >
-          <span class="code-element" data-language="Apex">Apex</span>
-          <span class="code-element" data-language="SOQL">SOQL</span>
-          <span class="code-element" data-language="LWC"
-            >Lightning Web Components</span
+          <span class="code-element" data-language="Python">Python</span>
+          <span class="code-element" data-language="Next.js">Next.js</span>
+          <span class="code-element" data-language="React Native"
+            >React Native</span
           >
           <span class="code-element" data-language="JavaScript"
             >JavaScript</span
           >
-          <span class="code-element" data-language="HTML/CSS">HTML/CSS</span>
+          <span class="code-element" data-language="Java">Java</span>
+          <span class="code-element" data-language="Docker">Docker</span>
           <span class="code-element" data-language="SQL">SQL</span>
           <span class="code-element" data-language="Git">Git</span>
         </div>
         <div class="container">
           <h1 class="page-title">Mes Projets</h1>
           <p class="page-description">
-            Je présente ici les projets que je trouve les plus importants et
-            impactants dans mon parcours académique et professionnel. Ces
-            réalisations illustrent mes compétences en développement, gestion de
-            données et conduite de projet.
+            Voici les projets dont je suis le plus content, à l'IUT comme en
+            perso. Du développement web et mobile, de la donnée, et quelques
+            idées que j'ai eu envie de construire pour le plaisir.
           </p>
           <div class="page-actions">
             <button id="showAllSaeBtn" class="btn-secondary">
@@ -97,8 +103,8 @@
                 </div>
               </div>
               <p class="project-description">
-                Conception et implémentation d'une base de données complète avec
-                modélisation des données et requêtes optimisées.
+                J'ai modélisé puis créé une base de données de bout en bout, des
+                tables jusqu'aux requêtes SQL.
               </p>
               <div class="competences-section">
                 <h4 class="competences-title">Les compétences liées :</h4>
@@ -146,8 +152,8 @@
                 </div>
               </div>
               <p class="project-description">
-                Développement d'algorithmes optimisés et analyse de complexité
-                pour résoudre des problèmes informatiques complexes.
+                J'ai écrit des algorithmes pour résoudre un problème donné, puis
+                étudié leur complexité pour les rendre plus rapides.
               </p>
               <div class="competences-section">
                 <h4 class="competences-title">Les compétences liées :</h4>
@@ -211,8 +217,8 @@
                 </div>
               </div>
               <p class="project-description">
-                Configuration et déploiement de services réseau avec
-                administration système et sécurisation des infrastructures.
+                J'ai installé et configuré des services réseau sur des machines
+                virtuelles, puis je les ai sécurisés.
               </p>
               <div class="competences-section">
                 <h4 class="competences-title">Les compétences liées :</h4>
@@ -257,9 +263,10 @@
                 </div>
               </div>
               <p class="project-description">
-                Application web interactive pour la consultation des données
-                Vélib en temps réel avec interface utilisateur moderne et
-                responsive.
+                Une application web qui affiche les données Vélib en temps réel :
+                stations, vélos disponibles, mises à jour automatiques. Côté
+                technique, le gros du travail portait sur la gestion des appels
+                API et l'optimisation des algorithmes.
               </p>
               <div class="competences-section">
                 <h4 class="competences-title">Les compétences liées :</h4>
@@ -323,9 +330,9 @@
                 </div>
               </div>
               <p class="project-description">
-                Application mobile native complexe pour la gestion et
-                consultation des stations Vélib avec géolocalisation et
-                interface intuitive.
+                Le prolongement mobile du projet Vélib : une app native pour
+                consulter les stations, avec géolocalisation pour trouver la plus
+                proche. Un projet plus ambitieux côté code et architecture.
               </p>
               <div class="competences-section">
                 <h4 class="competences-title">Les compétences liées :</h4>
@@ -378,9 +385,9 @@
                 </div>
               </div>
               <p class="project-description">
-                Développement en cours d'une plateforme web complète pour la
-                gestion d'une école privée de soutien scolaire (étudiants,
-                cours, paiements).
+                Une plateforme web pour gérer une école privée de soutien
+                scolaire : suivi des étudiants, des cours et des paiements.
+                Projet en cours.
               </p>
               <div class="competences-section">
                 <h4 class="competences-title">Les compétences liées :</h4>
@@ -426,6 +433,165 @@
                 </span>
               </div>
             </div>
+
+            <div class="project-card personal">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <div class="project-meta">
+                  <h3 class="project-title">FactureMoi.fr</h3>
+                  <span class="project-semester">Projet personnel</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Une application de facturation en Next.js, pensée pour le SEO et
+                le rendu côté serveur (SSR). Un SaaS que je construis de bout en
+                bout, du frontend à la base de données.
+              </p>
+              <div class="competences-section">
+                <h4 class="competences-title">Les compétences liées :</h4>
+                <div class="project-skills">
+                  <a
+                    href="competences.html#competence-1"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 1"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    1. Réaliser un développement d'application
+                  </a>
+                  <a
+                    href="competences.html#competence-2"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 2"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    2. Optimiser des applications informatiques
+                  </a>
+                  <a
+                    href="competences.html#competence-4"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 4"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    4. Gérer des données de l'information
+                  </a>
+                </div>
+              </div>
+              <div class="project-links">
+                <span class="project-link-disabled">
+                  <i class="fas fa-rocket"></i>
+                  En cours de développement
+                </span>
+              </div>
+            </div>
+
+            <div class="project-card personal">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <div class="project-meta">
+                  <h3 class="project-title">Veille automatisée d'alternances</h3>
+                  <span class="project-semester">Projet personnel</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Un script Python qui scrape les offres d'alternance, filtre
+                celles qui m'intéressent et m'envoie une alerte en temps réel. Il
+                tourne en continu sur un VPS Linux que j'administre moi-même.
+              </p>
+              <div class="competences-section">
+                <h4 class="competences-title">Les compétences liées :</h4>
+                <div class="project-skills">
+                  <a
+                    href="competences.html#competence-1"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 1"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    1. Réaliser un développement d'application
+                  </a>
+                  <a
+                    href="competences.html#competence-3"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 3"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    3. Administrer des systèmes informatiques communicants
+                    complexes
+                  </a>
+                  <a
+                    href="competences.html#competence-4"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 4"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    4. Gérer des données de l'information
+                  </a>
+                </div>
+              </div>
+              <div class="project-links">
+                <span class="project-link-disabled">
+                  <i class="fas fa-terminal"></i>
+                  Script déployé sur VPS Linux
+                </span>
+              </div>
+            </div>
+
+            <div class="project-card personal">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="project-meta">
+                  <h3 class="project-title">
+                    Moteur de recommandation de villes
+                  </h3>
+                  <span class="project-semester">Projet personnel</span>
+                </div>
+              </div>
+              <p class="project-description">
+                Une app mobile React Native qui recommande des villes par
+                similarité vectorielle (embeddings). L'IA tourne directement sur
+                le téléphone, sans serveur (on-device).
+              </p>
+              <div class="competences-section">
+                <h4 class="competences-title">Les compétences liées :</h4>
+                <div class="project-skills">
+                  <a
+                    href="competences.html#competence-1"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 1"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    1. Réaliser un développement d'application
+                  </a>
+                  <a
+                    href="competences.html#competence-2"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 2"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    2. Optimiser des applications informatiques
+                  </a>
+                  <a
+                    href="competences.html#competence-4"
+                    class="skill-tag competence-link"
+                    title="Voir la compétence 4"
+                  >
+                    <i class="fas fa-info-circle"></i>
+                    4. Gérer des données de l'information
+                  </a>
+                </div>
+              </div>
+              <div class="project-links">
+                <span class="project-link-disabled">
+                  <i class="fas fa-mobile-alt"></i>
+                  IA embarquée (on-device)
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -434,18 +600,25 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p>&copy; 2025 Yannel Aissani. Tous droits réservés.</p>
+          <p>&copy; 2026 Yannel Aissani. Tous droits réservés.</p>
           <div class="social-links">
             <a
               href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
               class="social-link"
-              ><i class="fab fa-linkedin"></i
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
             ></a>
-            <a href="https://github.com/aariisto" class="social-link"
-              ><i class="fab fa-github"></i
+            <a
+              href="https://github.com/aariisto"
+              class="social-link"
+              aria-label="GitHub"
+              ><i class="fab fa-github" aria-hidden="true"></i
             ></a>
-            <a href="mailto:yanne.aissani@gmail.com" class="social-link"
-              ><i class="fas fa-envelope"></i
+            <a
+              href="mailto:yanne.aissani@gmail.com"
+              class="social-link"
+              aria-label="Email"
+              ><i class="fas fa-envelope" aria-hidden="true"></i
             ></a>
           </div>
         </div>

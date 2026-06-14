@@ -3,17 +3,27 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
 if (hamburger && navMenu) {
+  const setMenu = (open) => {
+    hamburger.classList.toggle("active", open);
+    navMenu.classList.toggle("active", open);
+    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
   hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    setMenu(!navMenu.classList.contains("active"));
+  });
+
+  // The hamburger is a div, so wire up Enter/Space for keyboard users
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setMenu(!navMenu.classList.contains("active"));
+    }
   });
 
   // Close mobile menu when clicking on a link
   document.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-    });
+    link.addEventListener("click", () => setMenu(false));
   });
 }
 
@@ -89,9 +99,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
-    navbar.style.background = "rgba(15, 15, 35, 0.98)";
+    navbar.style.background = "rgba(11, 15, 20, 0.9)";
   } else {
-    navbar.style.background = "rgba(15, 15, 35, 0.95)";
+    navbar.style.background = "rgba(11, 15, 20, 0.72)";
   }
 });
 
@@ -146,33 +156,8 @@ document.querySelectorAll(".skill-card").forEach((card) => {
   });
 });
 
-// Dynamic typing effect for hero title (optional enhancement)
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.innerHTML = "";
-
-  function type() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  type();
-}
-
-// Initialize typing effect on homepage
-document.addEventListener("DOMContentLoaded", () => {
-  const heroTitle = document.querySelector(".hero-title");
-  if (
-    (heroTitle && window.location.pathname.endsWith("index.html")) ||
-    window.location.pathname === "/"
-  ) {
-    const originalText = heroTitle.textContent;
-    typeWriter(heroTitle, originalText, 80);
-  }
-});
+// Note: the hero title keeps its highlighted name (no typewriter effect),
+// which also keeps it readable with reduced-motion enabled.
 
 // Progress bar for page loading
 window.addEventListener("load", () => {
@@ -187,24 +172,26 @@ window.addEventListener("load", () => {
 
 // Back to top button
 const backToTop = document.createElement("button");
-backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+backToTop.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
 backToTop.className = "back-to-top";
+backToTop.setAttribute("aria-label", "Retour en haut");
+backToTop.setAttribute("type", "button");
 backToTop.style.cssText = `
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #4a90e2, #357abd);
+    width: 48px;
+    height: 48px;
+    background: #3b82f6;
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
 `;
 
 document.body.appendChild(backToTop);
@@ -228,13 +215,15 @@ backToTop.addEventListener("click", () => {
 
 // Add hover effect to back to top button
 backToTop.addEventListener("mouseenter", () => {
-  backToTop.style.transform = "translateY(-2px)";
-  backToTop.style.boxShadow = "0 6px 20px rgba(74, 144, 226, 0.4)";
+  backToTop.style.transform = "translateY(-3px)";
+  backToTop.style.background = "#60a5fa";
+  backToTop.style.boxShadow = "0 12px 28px rgba(59, 130, 246, 0.45)";
 });
 
 backToTop.addEventListener("mouseleave", () => {
   backToTop.style.transform = "translateY(0)";
-  backToTop.style.boxShadow = "0 4px 12px rgba(74, 144, 226, 0.3)";
+  backToTop.style.background = "#3b82f6";
+  backToTop.style.boxShadow = "0 8px 20px rgba(59, 130, 246, 0.35)";
 });
 
 // Enhanced form validation with real-time feedback
@@ -304,6 +293,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && navMenu && navMenu.classList.contains("active")) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
   }
 
   // Enter key to submit form

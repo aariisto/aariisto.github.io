@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compétences - Yannel Aissani</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,10 +20,10 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="brand-container">
-          <a href="index.html" class="nav-logo"><i class="fas fa-home"></i></a>
+          <a href="index.html" class="nav-logo" aria-label="Accueil"><i class="fas fa-home" aria-hidden="true"></i></a>
           <span class="portfolio-tag">#MonPortFolio</span>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="navMenu">
           <li class="nav-item">
             <a href="index.html" class="nav-link">Accueil</a>
           </li>
@@ -38,10 +40,17 @@
             <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div
+          class="hamburger"
+          role="button"
+          tabindex="0"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
         </div>
       </div>
     </nav>
@@ -51,8 +60,8 @@
         <div class="container">
           <h1 class="page-title">Les 6 compétences clés du BUT Informatique</h1>
           <p class="page-description">
-            IUT de Villetaneuse – Formation fondée sur l'acquisition de
-            compétences professionnelles essentielles en informatique
+            IUT de Villetaneuse. Une formation construite autour de compétences
+            professionnelles concrètes en informatique.
           </p>
         </div>
       </section>
@@ -71,13 +80,11 @@
             <div class="intro-text">
               <h2>Une formation par compétences</h2>
               <p>
-                Le BUT Informatique à l'IUT de Villetaneuse structure sa
-                pédagogie autour de
-                <strong>6 compétences fondamentales</strong> qui couvrent
-                l'ensemble des métiers de l'informatique. Chaque compétence est
-                développée à travers des projets concrets (SAE - Situations
-                d'Apprentissage et d'Évaluation) qui permettent une montée en
-                compétences progressive et professionnalisante.
+                Le BUT Informatique de l'IUT de Villetaneuse s'organise autour
+                de <strong>6 compétences</strong> qui couvrent les grands métiers
+                du domaine. On les travaille sur des projets concrets, les SAE
+                (Situations d'Apprentissage et d'Évaluation), et on progresse
+                année après année.
               </p>
             </div>
             <div class="intro-visual">
@@ -198,9 +205,8 @@
                 </h3>
                 <p class="competence-description">
                   Savoir installer, configurer, sécuriser et maintenir des
-                  serveurs, réseaux ou services virtualisés, en garantissant
-                  leur disponibilité et performance, tout en assurant la
-                  sécurité des données.
+                  serveurs, des réseaux ou des services virtualisés, pour qu'ils
+                  restent disponibles, performants et sûrs.
                 </p>
                 <div class="competence-keywords">
                   <span class="keyword">Administration système</span>
@@ -324,12 +330,10 @@
       <section class="competences-cta">
         <div class="container">
           <div class="cta-content">
-            <h2>Découvrez mes réalisations</h2>
+            <h2>Mes réalisations</h2>
             <p>
-              Chaque compétence a été développée à travers des projets concrets
-              et des situations d'apprentissage professionnalisantes. Explorez
-              mes réalisations pour voir comment j'ai mis en pratique ces
-              compétences.
+              Chaque compétence, je l'ai travaillée sur des projets concrets.
+              Allez voir comment je les ai mises en pratique.
             </p>
             <div class="cta-buttons">
               <a href="projets.html" class="btn btn-primary">
@@ -349,18 +353,25 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p>&copy; 2025 Yannel Aissani. Tous droits réservés.</p>
+          <p>&copy; 2026 Yannel Aissani. Tous droits réservés.</p>
           <div class="social-links">
             <a
               href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
               class="social-link"
-              ><i class="fab fa-linkedin"></i
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
             ></a>
-            <a href="https://github.com/aariisto" class="social-link"
-              ><i class="fab fa-github"></i
+            <a
+              href="https://github.com/aariisto"
+              class="social-link"
+              aria-label="GitHub"
+              ><i class="fab fa-github" aria-hidden="true"></i
             ></a>
-            <a href="mailto:yanne.aissani@gmail.com" class="social-link"
-              ><i class="fas fa-envelope"></i
+            <a
+              href="mailto:yanne.aissani@gmail.com"
+              class="social-link"
+              aria-label="Email"
+              ><i class="fas fa-envelope" aria-hidden="true"></i
             ></a>
           </div>
         </div>

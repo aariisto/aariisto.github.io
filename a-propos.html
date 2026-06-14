@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>À propos - Yannel Aissani</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,10 +20,10 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="brand-container">
-          <a href="index.html" class="nav-logo"><i class="fas fa-home"></i></a>
+          <a href="index.html" class="nav-logo" aria-label="Accueil"><i class="fas fa-home" aria-hidden="true"></i></a>
           <span class="portfolio-tag">#MonPortFolio</span>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="navMenu">
           <li class="nav-item">
             <a href="index.html" class="nav-link">Accueil</a>
           </li>
@@ -38,10 +40,17 @@
             <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div
+          class="hamburger"
+          role="button"
+          tabindex="0"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
         </div>
       </div>
     </nav>
@@ -51,8 +60,8 @@
         <div class="container">
           <h1 class="page-title">À propos de moi</h1>
           <p class="page-description">
-            Découvrez mon parcours, mes expériences et mes ambitions dans le
-            domaine de l'informatique.
+            Un peu plus sur moi : d'où je viens, ce que j'ai fait, et où je veux
+            aller en informatique.
           </p>
         </div>
       </section>
@@ -73,10 +82,10 @@
                       <h3>Ingénieur en Informatique - USTHB Alger</h3>
                       <span class="timeline-period">2022-2023</span>
                       <p class="timeline-description">
-                        Première année d'études supérieures en informatique à
-                        l'Université des Sciences et de la Technologie Houari
-                        Boumediene (USTHB) à Alger. Acquisition des bases
-                        fondamentales en informatique et mathématiques.
+                        Ma première année d'études supérieures, à l'Université
+                        des Sciences et de la Technologie Houari Boumediene
+                        (USTHB) à Alger. J'y ai posé mes bases en informatique et
+                        en mathématiques.
                       </p>
                     </div>
                   </div>
@@ -86,25 +95,37 @@
                       <h3>BUT1 Informatique - Les défis de l'adaptation</h3>
                       <span class="timeline-period">2023-2024</span>
                       <p class="timeline-description">
-                        En tant qu'étudiant international, le début a été un
-                        véritable défi. Découvrir un nouvel environnement, une
-                        nouvelle culture, et des méthodes d'enseignement
-                        différentes m'a demandé une grande capacité
-                        d'adaptation.
+                        Comme étudiant international, le début a été dur. Nouveau
+                        pays, nouvelle façon d'étudier, et un système que je ne
+                        connaissais pas. Il a fallu m'accrocher pour trouver mes
+                        repères.
                       </p>
                     </div>
                   </div>
                   <div class="timeline-item">
                     <div class="timeline-marker academic"></div>
                     <div class="timeline-content">
-                      <h3>BUT2 Informatique - L'excellence récompensée</h3>
-                      <span class="timeline-period">2024-2025 (en cours)</span>
+                      <h3>BUT2 Informatique - Le travail qui paie</h3>
+                      <span class="timeline-period">2024-2025</span>
                       <p class="timeline-description">
-                        Grâce à un travail constant et une persévérance sans
-                        faille, j'ai su m'adapter et tirer parti des
-                        enseignements. Cette progression m'a permis d'être
-                        classé parmi les meilleurs de ma promotion, récompensant
-                        mes efforts malgré les difficultés personnelles.
+                        À force de travail régulier, j'ai fini par trouver mon
+                        rythme et me classer parmi les meilleurs de ma
+                        promotion. Une vraie satisfaction après une première
+                        année difficile.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker academic"></div>
+                    <div class="timeline-content">
+                      <h3>BUT3 Informatique - Réalisation d'applications</h3>
+                      <span class="timeline-period">2025-2026</span>
+                      <p class="timeline-description">
+                        Dernière année du BUT, axée sur le développement
+                        full-stack, l'architecture logicielle, la gestion de
+                        projet agile et les bases de données avancées. Elle s'est
+                        conclue par un stage en entreprise sur un projet de
+                        migration de données industrielles.
                       </p>
                     </div>
                   </div>
@@ -116,6 +137,50 @@
                   <i class="fas fa-briefcase"></i>
                   Expérience professionnelle
                 </h2>
+                <div class="experience-card">
+                  <div class="experience-header">
+                    <h3>Stagiaire Développeur Full-Stack</h3>
+                    <div class="experience-meta">
+                      <span class="company">Migration SAP vers IFS</span>
+                      <span class="period">2026</span>
+                    </div>
+                  </div>
+                  <div class="experience-content">
+                    <h4>Mission principale :</h4>
+                    <p>
+                      Concevoir une plateforme de migration de données
+                      industrielles d'un ERP SAP vers IFS.
+                    </p>
+
+                    <h4>Réalisations :</h4>
+                    <ul class="achievement-list">
+                      <li>
+                        <i class="fas fa-check"></i>
+                        Développement de l'interface utilisateur de la plateforme
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        Conception d'API REST pour transformer les données (ETL)
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        Travail sur la qualité et la cohérence des données
+                        migrées
+                      </li>
+                    </ul>
+
+                    <h4>Compétences développées :</h4>
+                    <div class="skills-gained">
+                      <span class="skill-tag">Développement full-stack</span>
+                      <span class="skill-tag">API REST / ETL</span>
+                      <span class="skill-tag">Données industrielles</span>
+                      <span class="skill-tag">Travail en équipe</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-section">
                 <div class="experience-card">
                   <div class="experience-header">
                     <h3>Stagiaire Développeur Salesforce</h3>
@@ -173,9 +238,10 @@
                   <div class="experience-content">
                     <h4>Mission :</h4>
                     <p>
-                      Au sein d'une équipe dynamique, je m'assure que chaque
-                      client bénéficie d'un accueil chaleureux et d'un service
-                      personnalisé dans cet hôtel 4 étoiles.
+                      J'accueille les clients d'un hôtel 4 étoiles et je gère
+                      leur séjour, de l'arrivée au départ. Beaucoup de clientèle
+                      internationale, souvent plusieurs demandes à gérer en même
+                      temps.
                     </p>
                     <br />
 
@@ -197,37 +263,29 @@
                 </h2>
                 <div class="reflection-content">
                   <p>
-                    Au cours de mon stage chez CKL Research, j'ai découvert un
-                    nouvel environnement de travail très différent de celui de
-                    l'IUT. Intégrer une micro-entreprise dirigée par un
-                    freelance m'a plongé dans une organisation souple, orientée
-                    résultats, où j'ai rapidement gagné en autonomie et en
-                    responsabilité. Cette culture m'a marqué par sa proximité
-                    avec le client, l'efficacité des échanges, et l'importance
-                    accordée à l'adaptation et à la flexibilité. J'ai également
-                    pris conscience que je pouvais être à l'aise dans un cadre
-                    professionnel exigeant, tout en gardant une bonne capacité à
-                    communiquer clairement et à collaborer efficacement, même
-                    dans une petite équipe.
+                    Chez CKL Research, je suis arrivé dans un monde très
+                    différent de l'IUT. Une petite structure tenue par un
+                    freelance, où on va droit au but et où on gagne vite en
+                    autonomie. Ce qui m'a le plus marqué, c'est la proximité avec
+                    le client et la rapidité des échanges. J'y ai aussi vérifié
+                    une chose : je me sens bien dans un cadre exigeant, à
+                    condition de pouvoir communiquer clairement et collaborer,
+                    même à deux ou trois.
                   </p>
 
                   <p>
-                    Par ailleurs, mon expérience en tant que réceptionniste à
-                    l'hôtel Mercure m'a aussi beaucoup appris. J'y ai renforcé
-                    mes compétences humaines, notamment dans la gestion du
-                    stress, l'écoute active et la gestion des situations
-                    complexes avec les clients. Cela m'a permis de développer
-                    une approche plus empathique, rigoureuse et structurée, qui
-                    me sert aussi bien dans le relationnel que dans le
-                    développement informatique.
+                    À la réception du Mercure, j'ai appris autre chose. Gérer le
+                    stress quand tout arrive en même temps, écouter vraiment, et
+                    régler des situations délicates avec des clients du monde
+                    entier. Ça m'a rendu plus posé et plus à l'écoute, et ça me
+                    sert autant dans le relationnel que devant mon code.
                   </p>
 
                   <p>
-                    Ces deux expériences m'ont permis de mieux me connaître : je
-                    suis capable de m'adapter à des environnements très
-                    différents, de travailler avec rigueur, de prendre des
-                    initiatives et de m'impliquer pleinement dans mes missions,
-                    qu'elles soient techniques ou relationnelles.
+                    Au final, ces deux expériences m'ont surtout appris sur
+                    moi-même : je m'adapte à des environnements très différents,
+                    je prends des initiatives et je m'investis à fond, que la
+                    mission soit technique ou humaine.
                   </p>
                 </div>
               </div>
@@ -243,11 +301,10 @@
                       <i class="fas fa-medal"></i>
                     </div>
                     <div class="achievement-content">
-                      <h4>Excellence académique</h4>
+                      <h4>Bien classé en BUT</h4>
                       <p>
-                        Classement parmi les meilleurs de ma promotion malgré
-                        les défis d'adaptation en tant qu'étudiant
-                        international.
+                        Parmi les meilleurs de ma promotion, alors que j'étais
+                        arrivé d'Algérie sans connaître le système français.
                       </p>
                     </div>
                   </div>
@@ -257,11 +314,11 @@
                       <i class="fas fa-balance-scale"></i>
                     </div>
                     <div class="achievement-content">
-                      <h4>Équilibre vie professionnelle/études</h4>
+                      <h4>Les études et le boulot en même temps</h4>
                       <p>
-                        Réussite de mes études tout en travaillant comme
-                        réceptionniste d'hôtel, démontrant ma capacité de
-                        gestion du temps et d'organisation.
+                        J'ai réussi mon BUT tout en travaillant comme
+                        réceptionniste d'hôtel. Ça m'a forcé à bien organiser mon
+                        temps.
                       </p>
                     </div>
                   </div>
@@ -271,11 +328,12 @@
                       <i class="fas fa-code"></i>
                     </div>
                     <div class="achievement-content">
-                      <h4>Projet personnel en cours</h4>
+                      <h4>Des projets que je mène seul</h4>
                       <p>
-                        Développement d'une plateforme web de gestion pour une
-                        école privée de soutien scolaire (gestion des étudiants,
-                        cours, paiements).
+                        FactureMoi.fr, une app de facturation en Next.js, un bot
+                        de veille qui scrape des offres d'alternance sur un VPS
+                        Linux, et un moteur de reco de villes par embeddings.
+                        J'apprends surtout en construisant.
                       </p>
                     </div>
                   </div>
@@ -297,8 +355,8 @@
                   </div>
                 </div>
                 <p class="ambition-description">
-                  Je souhaite poursuivre mes études en Master dans l'un de ces
-                  deux domaines qui me passionnent particulièrement.
+                  Je veux continuer en cycle ingénieur ou en master, dans l'un
+                  de ces deux domaines qui me plaisent vraiment.
                 </p>
               </div>
 
@@ -323,7 +381,7 @@
                     <i class="fas fa-user-friends"></i>
                     <div>
                       <h4>Travail autonome ou en équipe</h4>
-                      <p>Polyvalence dans les modes de collaboration</p>
+                      <p>À l'aise seul comme à plusieurs</p>
                     </div>
                   </div>
                 </div>
@@ -332,14 +390,24 @@
               <div class="sidebar-section">
                 <h3>Technologies</h3>
                 <div class="tech-stack">
-                  <span class="tech-tag">Salesforce</span>
-                  <span class="tech-tag">Apex</span>
-                  <span class="tech-tag">SOQL</span>
-                  <span class="tech-tag">Lightning Web Components</span>
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PHP</span>
                   <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">HTML/CSS</span>
-                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">API REST</span>
+                  <span class="tech-tag">JWT</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">Redis</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Linux</span>
                   <span class="tech-tag">Git</span>
+                  <span class="tech-tag">Apex</span>
+                  <span class="tech-tag">Salesforce</span>
                 </div>
               </div>
             </div>
@@ -351,18 +419,25 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p>&copy; 2025 Yannel Aissani. Tous droits réservés.</p>
+          <p>&copy; 2026 Yannel Aissani. Tous droits réservés.</p>
           <div class="social-links">
             <a
               href="https://www.linkedin.com/in/yannel-aissani-2b7509304/"
               class="social-link"
-              ><i class="fab fa-linkedin"></i
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
             ></a>
-            <a href="https://github.com/aariisto" class="social-link"
-              ><i class="fab fa-github"></i
+            <a
+              href="https://github.com/aariisto"
+              class="social-link"
+              aria-label="GitHub"
+              ><i class="fab fa-github" aria-hidden="true"></i
             ></a>
-            <a href="mailto:yanne.aissani@gmail.com" class="social-link"
-              ><i class="fas fa-envelope"></i
+            <a
+              href="mailto:yanne.aissani@gmail.com"
+              class="social-link"
+              aria-label="Email"
+              ><i class="fas fa-envelope" aria-hidden="true"></i
             ></a>
           </div>
         </div>
